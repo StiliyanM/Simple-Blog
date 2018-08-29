@@ -1,0 +1,14 @@
+﻿@model PostsListingViewModel
+<div class="col-md-8 m-md-2">
+    <a asp-page="/Posts/Details" asp-route-id="@Model.Id">
+        <h3>@Model.Title</h3>
+    </a>
+    <p>Published By <span class="font-weight-bold">@Model.Author</span> on @Model.PublishDate.ToString("D")</p>
+    <p>@(new string(Model.Content.Take(100).ToArray()))...</p>
+    <a class="btn btn-info" asp-page="/Posts/Details" asp-route-id="@Model.Id">Read More</a>
+    @if (this.User.IsInRole("Administrator"))
+    {
+        <a asp-area="Admin" asp-controller="Posts" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+        <a asp-area="Admin" asp-controller="Posts" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    }
+</div>

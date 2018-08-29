@@ -1,0 +1,17 @@
+﻿@model IEnumerable<PostsListingViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br>
+<h2>Most Recent Posts:</h2>
+@if (this.User.IsInRole("Administrator"))
+{
+    <a asp-area="Admin" asp-controller="Posts" asp-action="Create" class="btn btn-success float-right">
+        <i class="fa fa-plus"></i> Create new post
+    </a>
+}
+
+<div class="row">
+    @Html.DisplayForModel()   
+</div>

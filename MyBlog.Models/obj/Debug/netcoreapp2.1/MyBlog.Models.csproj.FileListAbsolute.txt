@@ -1,0 +1,17 @@
+c:\users\asus\source\repos\MyBlog\MyBlog.Models\bin\Debug\netcoreapp2.1\MyBlog.Models.deps.json
+c:\users\asus\source\repos\MyBlog\MyBlog.Models\bin\Debug\netcoreapp2.1\MyBlog.Models.dll
+c:\users\asus\source\repos\MyBlog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.csproj.CoreCompileInputs.cache
+c:\users\asus\source\repos\MyBlog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.AssemblyInfoInputs.cache
+c:\users\asus\source\repos\MyBlog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.AssemblyInfo.cs
+c:\users\asus\source\repos\MyBlog\MyBlog.Models\bin\Debug\netcoreapp2.1\MyBlog.Models.pdb
+c:\users\asus\source\repos\MyBlog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.dll
+c:\users\asus\source\repos\MyBlog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.pdb
+D:\MyBlog\Simple-Blog\MyBlog.Models\bin\Debug\netcoreapp2.1\MyBlog.Models.deps.json
+D:\MyBlog\Simple-Blog\MyBlog.Models\bin\Debug\netcoreapp2.1\MyBlog.Models.dll
+D:\MyBlog\Simple-Blog\MyBlog.Models\bin\Debug\netcoreapp2.1\MyBlog.Models.pdb
+D:\MyBlog\Simple-Blog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.csprojAssemblyReference.cache
+D:\MyBlog\Simple-Blog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.csproj.CoreCompileInputs.cache
+D:\MyBlog\Simple-Blog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.AssemblyInfoInputs.cache
+D:\MyBlog\Simple-Blog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.AssemblyInfo.cs
+D:\MyBlog\Simple-Blog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.dll
+D:\MyBlog\Simple-Blog\MyBlog.Models\obj\Debug\netcoreapp2.1\MyBlog.Models.pdb

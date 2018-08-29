@@ -1,0 +1,60 @@
+﻿@page "id"
+@model MyBlog.Web.Pages.Posts.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <hr>
+            <h2>@Model.Post.Title</h2>
+            <h5><i class="far fa-clock"></i> Post by @Model.Post.Author, @Model.Post.PublishDate.ToString("D")</h5>
+            <h5><span class="label label-primary">Category: @Model.Post.Category</span></h5><br>
+            <p>@Model.Post.Content</p>
+            @{
+                var like = Model.Post.Likes.FirstOrDefault(l => l.PostId == Model.Post.Id && l.Username == this.User.Identity.Name);
+
+                bool isLiked = false;
+
+                if (like != null)
+                {
+                    isLiked = like.IsClicked;
+                }
+            }
+            @if (!isLiked)
+            {
+                <form method="post">
+                    <button asp-controller="Likes"
+                            asp-action="Like"
+                            asp-route-postId="@Model.Post.Id"
+                            name="theButton" class="btn btn-primary">
+                        <i class="fa fa-thumbs-up"></i><span> @Model.Post.Likes.Count(l => l.IsClicked) Likes</span>
+                    </button>
+                </form>
+            }
+            else
+            {
+                <button disabled name="theButton" class="btn btn-info">
+                    <i class="fa fa-thumbs-up"></i><span> @Model.Post.Likes.Count(l => l.IsClicked) Likes</span>
+                </button>
+            }
+            <br><br>
+            <h4>Leave a Comment:</h4>
+            <form method="post">
+                <div class="form-group">
+                    <textarea class="form-control" name="content" rows="3" required></textarea>
+                </div>
+                <input type="submit" asp-area="" asp-controller="Comments" asp-action="Create" asp-route-postId="@Model.Post.Id" class="btn btn-success"></>
+            </form>
+            <br><br>
+            <h3>@Model.Post.Comments.Count() Comments:</h3><br>
+            <partial name="_Comments" model="@Model.Post.Comments">
+                </>
+        </div>
+    </div>
+</div>
+
+
+

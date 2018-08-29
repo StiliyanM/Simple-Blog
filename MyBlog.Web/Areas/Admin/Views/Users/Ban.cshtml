@@ -1,0 +1,32 @@
+﻿@model MyBlog.Common.BindingModels.UserLockoutBindingModel
+
+@{
+    ViewData["Title"] = "Ban";
+}
+
+<p>
+    <h2>Ban User</h2>
+</p>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="BanAsync">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input readonly asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LockoutEnd" class="control-label"></label>
+                <input asp-for="LockoutEnd" class="form-control" />
+                <span asp-validation-for="LockoutEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+                <a class="btn btn-light" asp-action="Index">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

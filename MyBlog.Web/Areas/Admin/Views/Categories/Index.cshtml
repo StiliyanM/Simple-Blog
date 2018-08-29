@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CategoriesListingModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<p>
+    <h2>Categories</h2>
+
+    <a asp-area="Admin"
+       asp-controller="Categories"
+       asp-action="Create"
+       class="btn btn-success float-right">
+        <i class="fa fa-plus"></i> Create new category
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @Html.DisplayForModel()
+    </tbody>
+</table>

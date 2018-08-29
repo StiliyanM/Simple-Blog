@@ -1,0 +1,27 @@
+﻿@page
+@model MyBlog.Web.Pages.Posts.ArchivesModel
+@using System.Globalization
+@{
+    ViewData["Title"] = "Archives";
+}
+
+<h2>Archives</h2>
+<hr />
+@foreach (var item in Model.Archives)
+{
+    <h3>
+        @CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(item.Month) @item.Year
+    </h3>
+    <ul>
+        @foreach (var post in item.Posts)
+        {
+            <li>
+                <a asp-area=""
+                   asp-controller="Posts"
+                   asp-action="Details"
+                   asp-route-id="@post.Id">@post.Title</a>
+            </li>
+        }
+    </ul>
+    <hr />
+}

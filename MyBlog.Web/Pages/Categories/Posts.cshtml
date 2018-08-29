@@ -1,0 +1,30 @@
+﻿@page
+
+@model MyBlog.Web.Pages.PostsModel
+@{
+    ViewData["Title"] = "Categories";
+}
+<h2>Categories</h2>
+<hr />
+@foreach (var category in Model.Categories)
+{
+    <h3>@category.Name</h3>
+
+    @if (category.Posts.Count() == 0)
+    {
+        <p>No posts yet in this category!</p>
+    }
+    <ul>
+        @foreach (var post in category.Posts)
+        {
+            <li>
+                <a asp-area=""
+                   asp-controller="Posts"
+                   asp-action="Details"
+                   asp-route-id="@post.Id">@post.Title</a>
+            </li>
+        }
+    </ul>
+    <hr />
+
+}

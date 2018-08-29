@@ -1,0 +1,41 @@
+﻿@model IEnumerable<UserListingViewModel>
+
+@{
+    ViewData["Title"] = "All";
+}
+
+<p>
+    <h2>Users</h2>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Ban"
+                   asp-route-username="@item.Username" class="btn-sm btn-warning">Ban</a>
+                <a asp-action="Delete"
+                   asp-route-username="@item.Username" class="btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
